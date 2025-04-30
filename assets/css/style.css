@@ -1,20 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background-color: #000000;
+  color: white;
 }
 
-.profile-image {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+.main-container {
+	padding: 1rem;
+}
+
+.profile {
+	display: flex;
+	width: 100%;
+	align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.me {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+
+section {
+  background-color: #1b1f23;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
+
+/* responsividade */
+@media (max-width: 765px) {
+	.profile {
+		flex-direction: column;
+	}
 }
