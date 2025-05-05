@@ -1,46 +1,428 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+/* Tema padrão: dark */
+:root {
+	--d-bg: #292929;
+	--d-bg2: #000;
+	--d-accent: #5e5e5e;
+	--d-text: #fff;
+	--d-text2: #d8d8d8;
+	--d-text3: #1e1e1e;
+	--d-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Tema alternativo: light */
+:root[data-theme="light"] {
+	--d-bg: #ece7e1;
+	--d-bg2: #fff;
+	--d-accent: #bdb7b0;
+	--d-text: #1a1818;
+	--d-text2: #3a3939;
+	--d-text3: #ece7e1;
+	--d-shadow: rgba(0, 0, 0, 0.07);
+}
+
+/* Formatação Geral do site */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+/* Ao clicar em um link scroll: */
+html {
+	scroll-padding-top: 8rem;
+	scroll-behavior: smooth;
+	/* Esconder a barra de rolagem mas permitir scroll */
+	scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Edge */
+}
+
+/* Alinhamento de todos os itens do corpo */
 body {
-	font-family: "Poppins", sans-serif;
-	display: flex;
+	display: block;
+	font-family: "Montserrat", sans-serif;
 	justify-content: center;
 	align-items: center;
-  background-color: #000000;
-  color: white;
+	/* Estilização geral do tema */
+	color: var(--d-text);
+	background-color: var(--d-bg);
+	transition: background 0.3s, color 0.3s;
 }
+
+/* Início de estilização das section */
 
 .main-container {
-	padding: 1rem;
+	padding: 3rem;
+	line-height: 1.9em;
 }
 
-.profile {
+/* INÍCIO */
+.home {
+	margin-top: 4rem;
 	display: flex;
-	width: 100%;
+	font-family: "Playfair Display", serif;
+	justify-content: space-between;
 	align-items: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
+	text-align: left;
 }
-.me {
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+.home h2 {
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 7rem;
+	line-height: normal;
+	font-weight: 100;
+}
+.home h2 span {
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 900;
+	color: var(--d-text2);
+
+	text-transform: uppercase;
+}
+.home p {
+	color: var(--d-text2);
+	font-size: 1.5rem;
+	writing-mode: vertical-lr;
+	text-orientation: mixed;
+	letter-spacing: 0.2rem;
+	text-align: center;
 }
 
-section {
-  background-color: #1b1f23;
-  padding: 1.6rem;
-  border-radius: 0.8rem;
+/* pedido de scroll */
+.mouse-btn {
+	margin: auto;
+	margin-top: 5rem;
+	margin-bottom: 7rem;
+	width: 20px;
+	height: 40px;
+	border: 3px solid rgba(180, 180, 180, 0.918);
+	border-radius: 20px;
+	display: flex;
+}
+.mouse-scroll {
+	display: block;
+	width: 8px;
+	height: 8px;
+	background: linear-gradient(
+		170deg,
+		rgba(170, 170, 170, 0.918),
+		rgb(178, 178, 178)
+	);
+	border-radius: 50%;
+	margin: auto;
+	animation: scrolling13 1s linear infinite;
+}
+@keyframes scrolling13 {
+	0% {
+		opacity: 1;
+		transform: translateY(-12px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+}
+
+/* SOBRE MIM */
+.about-me {
+	margin: auto;
+	max-width: 60rem;
+	margin-top: 5rem;
+	padding: 1.6rem;
+	border-radius: 0.8rem;
+	background: none;
+	box-shadow: inset 2px 5px 10px var(--d-shadow);
+}
+.about-me h2,
+.projects h2 {
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+.about-me hr {
+	border: 4px solid var(--d-accent);
+	border-radius: 5px;
+	width: 5%;
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+.about-me p {
+	color: var(--d-text2);
+	font-size: 16px;
+	text-decoration: none;
+}
+.about-me a {
+	color: var(--d-text2);
+}
+
+/* HABILIDADES */
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 40rem;
+	gap: 0.7rem;
+	justify-content: center;
+	margin: auto;
+	margin-top: 2rem;
+}
+.skill-badge {
+	display: inline-block;
+	padding: 0.5rem 1.2rem;
+	background: #56565651;
+	color: var(--d-text);
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	font-weight: 500;
+	transition: background 0.2s, color 0.2s;
+	margin-bottom: 0.2rem;
+	white-space: nowrap;
+}
+
+/* PROJETOS */
+.projects {
+	margin-top: 5rem;
+	gap: 2rem;
+	display: block;
+}
+.projects-grid {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	align-items: flex-start;
+	justify-items: center;
+}
+
+/* CONTATO */
+.contact {
+	display: flex;
+	margin: auto;
+	margin-top: 5rem;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 45rem;
+	padding: 1.6rem;
+	border-radius: 0.8rem;
+	background: none;
+	box-shadow: inset 2px 5px 10px var(--d-shadow);
+}
+.contact h2 {
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+.contact form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.contact textarea {
+
+	padding: 10px;
+	height: 200px;
+	scrollbar-width: none; 
+	resize: none;
+	color: var(--d-text); /* cor do texto conforme tema */
+	background-color: var(--d-accent);
+	border-radius: .5rem;
+	border: 2px solid transparent;
+	font-size: 1rem;
+}
+.contact input, .contact textarea {
+	transition: border-color 0.3s;
+	font-family: "Montserrat", sans-serif;
+	background-color: #a3a3a327;
+}
+.contact input{
+  height: 50px;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  color: var(--d-text);
+	margin-bottom: 2rem;
+}
+input:hover, input:focus,
+textarea:hover, textarea:focus {
+  outline: none;
+  border-color: var(--d-text);
+}
+.contact label {
+  font-size: 1rem;
+	font-weight: 800;
+  color: var(--d-text);
+}
+/* botão submit contato */
+.contact button {
+	cursor: pointer;
+	background-color: var(--d-text);
+	color: var(--d-bg);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+	font-size: 18px;
+	font-weight: 800;
+	margin-top: 2rem;
+	height: 50px;
+	width: 100%;
+	border: none;
+	border-radius: 0.5rem;
+}
+.contact button:hover {
+	transition: background-color 0.3s;
+	background-color: var(--d-text3);
+	color: var(--d-text);
+}
+.contact button:active {
+	background-color: var(--d-text2);
+	color: var(--d-bg);
+}
+
+/* RODAPÉ */
+footer {
+	background: #000 !important;
+	color: #fff !important;
+	text-align: center;
+	padding: 2rem;
+}
+
+/* Botões de link do rodapé */
+.BtnLinkedin,
+.BtnGithub,
+.BtnWhatsapp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border: none;
+	border-radius: 50%;
+	background: #00000000;
+	margin: 0 0.2rem;
+	cursor: pointer;
+	transition: background 0.2s, box-shadow 0.2s;
+	position: relative;
+	overflow: hidden;
+}
+.BtnLinkedin:hover {
+	background: #0077b5;
+}
+.BtnGithub:hover {
+	background: #333;
+}
+.BtnWhatsapp:hover {
+	background: #25d366;
+}
+.BtnLinkedin .svgContainerLinkedin,
+.BtnGithub .svgContainerGithub,
+.BtnWhatsapp .svgContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+.BtnLinkedin svg,
+.BtnGithub svg,
+.BtnWhatsapp svg {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+.BtnLinkedin .BGLinkedin,
+.BtnGithub .BGGithub,
+.BtnWhatsapp .BG {
+	display: none;
+}
+
+/* Espaçamento entre botões no rodapé */
+footer > div > div {
+	gap: 0.7rem;
 }
 
 /* responsividade */
-@media (max-width: 765px) {
-	.profile {
+@media (max-width: 795px) {
+	.main-container {
+		padding: 1rem;
+	}
+	.projects-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Responsividade adicional para Home, Sobre mim e esconder scroll */
+@media (max-width: 700px) {
+	/* Esconde o ícone de scroll */
+	.container_mouse,
+	.mouse-btn {
+		display: none !important;
+	}
+
+	.home p {
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		text-align: left;
+		margin-top: 0.5rem;
+	}
+
+	.about-me {
+		padding: 1rem;
+		margin-top: 2rem;
+		max-width: 100%;
+		font-size: 15px;
+	}
+	.about-me h2 {
+		font-size: 1.3rem;
+	}
+	.about-me p {
+		font-size: 14px;
+	}
+
+	.about-me-flex {
 		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.skills-me {
+		max-width: 100%;
+	}
+
+	.skills-list {
+		gap: 0.5rem;
+	}
+	.skill-badge {
+		font-size: 0.95rem;
+		padding: 0.4rem 0.9rem;
+	}
+}
+
+@media (orientation: portrait) and (max-width: 700px) {
+	.home h2 {
+		font-size: 4.5rem;
+	}
+	.about-me {
+		padding: 0.5rem;
+	}
+}
+
+/* Ajustes extras para telas muito pequenas */
+@media (max-width: 450px) {
+	.home h2 {
+		font-size: 4.5rem;
+	}
+	.about-me {
+		padding: 0.5rem;
+	}
+	.skill-badge {
+		font-size: 0.85rem;
+		padding: 0.3rem 0.7rem;
 	}
 }

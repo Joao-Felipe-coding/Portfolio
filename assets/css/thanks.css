@@ -1,0 +1,69 @@
+@import url("./style.css");
+
+.thanks-message {
+  text-transform: uppercase;
+  padding: 20px;
+  text-align: left;
+  font-size: 2rem;
+  animation: fadeInOutSide 3s forwards;
+  max-width: 700px;
+  width: 90vw;
+  box-sizing: border-box;
+}
+.thanks-message h2 {
+  font-size: 5rem;
+  color: var(--d-text2);
+  font-weight: 900;
+}
+.thanks-message p {
+  font-style: italic;
+  color: var(--d-text);
+}
+
+/* Animação lateral (da direita para o centro e depois para a esquerda) */
+@keyframes fadeInOutSide {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+}
+
+@media (max-width: 600px) {
+  .thanks-message {
+    font-size: 1.2rem;
+    padding: 10px;
+    max-width: 98vw;
+  }
+  .thanks-message h2 {
+    font-size: 2.5rem;
+  }
+  .thanks-message p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .thanks-message {
+    font-size: 1rem;
+    padding: 6px;
+  }
+  .thanks-message h2 {
+    font-size: 1.5rem;
+  }
+  .thanks-message p {
+    font-size: 0.9rem;
+  }
+}
+
