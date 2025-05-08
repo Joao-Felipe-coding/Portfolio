@@ -55,7 +55,6 @@ body {
 }
 
 /* Início de estilização das section */
-
 .main-container {
 	padding: 3rem;
 	line-height: 1.9em;
@@ -67,6 +66,8 @@ body {
 	max-width: 60rem;
 	margin-top: 5rem;
 	padding: 1.6rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 	border-radius: 0.8rem;
 	background: none;
 	box-shadow: inset 2px 5px 10px var(--d-shadow);
@@ -119,6 +120,52 @@ body {
 	white-space: nowrap;
 }
 
+/* CURRICULO */
+.cv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5rem;
+}
+.cv button {
+	max-width: 200px;
+	transition: all 0.4s ease;
+	cursor: pointer;
+	background: linear-gradient(135deg, #000000, #1b1b1b);
+	background-size: 200% 100%;
+	color: #fff;
+	box-shadow: 0 4px 15px rgba(51, 51, 51, 0.6);
+	font-size: 18px;
+	font-weight: 800;
+	margin-top: 2rem;
+	height: 50px;
+	width: 50%;
+	border: none;
+	border-radius: 0.5rem;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	animation: gradientShift 3s ease infinite;
+}
+.cv button:hover,
+.cv button:focus {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(31, 31, 31, 0.8);
+	background-size: 150% 150%;
+}
+
+@keyframes gradientShift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 /* PROJETOS */
 .projects {
 	margin-top: 5rem;
@@ -153,10 +200,9 @@ body {
 	width: 100%;
 }
 .contact textarea {
-
 	padding: 10px;
 	height: 200px;
-	scrollbar-width: none; 
+	scrollbar-width: none;
 	resize: none;
 	color: var(--d-text); /* cor do texto conforme tema */
 	background-color: var(--d-accent);
@@ -164,32 +210,36 @@ body {
 	border: 2px solid transparent;
 	font-size: 1rem;
 }
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
 	transition: border-color 0.3s;
 	font-family: "Montserrat", sans-serif;
 	background-color: #a3a3a327;
 }
-.contact input{
-  height: 50px;
-  border-radius: .5rem;
-  padding: 0 1rem;
-  border: 2px solid transparent;
-  font-size: 1rem;
-  color: var(--d-text);
+.contact input {
+	height: 50px;
+	border-radius: .5rem;
+	padding: 0 1rem;
+	border: 2px solid transparent;
+	font-size: 1rem;
+	color: var(--d-text);
 	margin-bottom: 2rem;
 }
-input:hover, input:focus,
-textarea:hover, textarea:focus {
-  outline: none;
-  border-color: var(--d-text);
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+	outline: none;
+	border-color: var(--d-text);
 }
 .contact label {
-  font-size: 1rem;
+	font-size: 1rem;
 	font-weight: 800;
-  color: var(--d-text);
+	color: var(--d-text);
 }
 /* botão submit contato */
 .contact button {
+	transition: background-color 0.3s;
 	cursor: pointer;
 	background-color: var(--d-text);
 	color: var(--d-bg);
@@ -203,14 +253,11 @@ textarea:hover, textarea:focus {
 	border: none;
 	border-radius: 0.5rem;
 }
-.contact button:hover {
+.contact button:hover,
+button:focus {
 	transition: background-color 0.3s;
 	background-color: var(--d-text3);
 	color: var(--d-text);
-}
-.contact button:active {
-	background-color: var(--d-text2);
-	color: var(--d-bg);
 }
 
 /* RODAPÉ */
