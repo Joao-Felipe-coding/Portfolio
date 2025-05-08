@@ -107,25 +107,81 @@
         </div>
       </div>
 
-          <!-- CV & projetos -->
-    <div class="cv">
-      <button type="button" onclick="window.open('./assets/cv/CV.pdf', '_blank')">Currículo</button>
-    </div>
+      <!-- CV -->
+      <div class="cv">
+        <button type="button" onclick="window.open('./assets/cv/CV.pdf', '_blank')">Currículo</button>
+      </div>
     </section>
 
     <!-- Seção Projetos -->
     <section id="projects" class="projects" aria-label="Projetos">
       <h2>Projetos</h2>
+
+      <!-- Café Deliciae (Destaque - fora do grid) -->
+      <div class="custom-card-large">
+        <div class="custom-card-large-img">
+          <img src="assets/images/cardapio.jpg" alt="Café Delicia" />
+        </div>
+        <div class="custom-card-large-body">
+          <h5 class="custom-card-large-title"
+            style="font-family: 'Playfair Display', serif; letter-spacing: 8px; font-weight: 300;">
+            CAFÉ DELICIA
+          </h5>
+          <p class="custom-card-large-text">
+            Um cardápio online para Café Delícia. Focado em sua primeira versão para ser uma ferramenta apenas para que os clientes possam visualizar os produtos disponíveis no cardápio da cafeteria.
+          </p>
+          <div class="custom-card-large-techs">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="custom-card-large-footer">
+            <button type="button" class="custom-card-large-btn"
+              onclick="window.open('https://cardapio-one-rust.vercel.app', '_blank')">
+              Website
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GDG Unicesumar (Destaque - fora do grid) -->
+      <div class="custom-card-large">
+        <div class="custom-card-large-img">
+          <img src="assets/images/gdg-unicesumar.jpg" alt="GDG Unicesumar" />
+        </div>
+        <div class="custom-card-large-body">
+          <h5 class="custom-card-large-title">
+            GDG Unicesumar 2025
+          </h5>
+          <p class="custom-card-large-text">
+            Um site para a divulgação de eventos que ocorrem na Unicesumar de Londrina, sendo o último evento registrado para, os palestrantes da GDG Londrina, na data 27 a 30 de maio de 2025.
+          </p>
+          <div class="custom-card-large-techs">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="custom-card-large-footer">
+            <button type="button" class="custom-card-large-btn"
+              onclick="window.open('https://evento-tech-sepia.vercel.app', '_blank')">
+              website
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div class="projects-grid">
-        <!-- Card de projeto -->
-        <div class="custom-card">
-          <div class="custom-card-header"></div>
+        <!-- Calculadora de IMC (Card padrão) -->
+        <!-- <div class="custom-card">
+          <div class="custom-card-header">
+            <img src="./assets/images/calculadora-IMC.jpg" alt="Calculadora de IMC" srcset="">
+          </div>
           <div class="custom-card-body">
             <h5 class="custom-card-title">
               Calculadora de IMC
             </h5>
             <p class="custom-card-text">
-              Calculadora de IMC simples
+              Sistema focado no back-end, tornaram esta uma ferramenta de cálculo, eficiente e eficaz.
             </p>
           </div>
           <div class="custom-card-footer">
@@ -135,7 +191,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- Seção de contato -->
