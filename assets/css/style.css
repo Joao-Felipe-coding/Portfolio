@@ -14,12 +14,12 @@
 
 /* Tema alternativo: light */
 :root[data-theme="light"] {
-	--d-bg: #ece7e1;
+	--d-bg: #f0efef;
 	--d-bg2: #fff;
-	--d-accent: #bdb7b0;
+	--d-accent: #bebebd;
 	--d-text: #1a1818;
 	--d-text2: #3a3939;
-	--d-text3: #ece7e1;
+	--d-text3: #f0efef;
 	--d-shadow: rgba(0, 0, 0, 0.07);
 }
 
@@ -61,75 +61,6 @@ body {
 	line-height: 1.9em;
 }
 
-/* INÍCIO */
-.home {
-	margin-top: 4rem;
-	display: flex;
-	font-family: "Playfair Display", serif;
-	justify-content: space-between;
-	align-items: center;
-	text-align: left;
-}
-.home h2 {
-	text-transform: uppercase;
-	font-style: italic;
-	font-size: 7rem;
-	line-height: normal;
-	font-weight: 100;
-}
-.home h2 span {
-	font-optical-sizing: auto;
-	font-style: normal;
-	font-weight: 900;
-	color: var(--d-text2);
-
-	text-transform: uppercase;
-}
-.home p {
-	color: var(--d-text2);
-	font-size: 1.5rem;
-	writing-mode: vertical-lr;
-	text-orientation: mixed;
-	letter-spacing: 0.2rem;
-	text-align: center;
-}
-
-/* pedido de scroll */
-.mouse-btn {
-	margin: auto;
-	margin-top: 5rem;
-	margin-bottom: 7rem;
-	width: 20px;
-	height: 40px;
-	border: 3px solid rgba(180, 180, 180, 0.918);
-	border-radius: 20px;
-	display: flex;
-}
-.mouse-scroll {
-	display: block;
-	width: 8px;
-	height: 8px;
-	background: linear-gradient(
-		170deg,
-		rgba(170, 170, 170, 0.918),
-		rgb(178, 178, 178)
-	);
-	border-radius: 50%;
-	margin: auto;
-	animation: scrolling13 1s linear infinite;
-}
-@keyframes scrolling13 {
-	0% {
-		opacity: 1;
-		transform: translateY(-12px);
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateY(12px);
-	}
-}
-
 /* SOBRE MIM */
 .about-me {
 	margin: auto;
@@ -141,7 +72,8 @@ body {
 	box-shadow: inset 2px 5px 10px var(--d-shadow);
 }
 .about-me h2,
-.projects h2 {
+.projects h2,
+.contact h2 {
 	text-align: center;
 	font-size: 2rem;
 	text-transform: uppercase;
@@ -214,12 +146,6 @@ body {
 	border-radius: 0.8rem;
 	background: none;
 	box-shadow: inset 2px 5px 10px var(--d-shadow);
-}
-.contact h2 {
-	text-align: center;
-	font-size: 2rem;
-	text-transform: uppercase;
-	margin-bottom: 1rem;
 }
 .contact form {
 	display: flex;
@@ -367,13 +293,6 @@ footer > div > div {
 		display: none !important;
 	}
 
-	.home p {
-		font-size: 1rem;
-		letter-spacing: 0.1rem;
-		text-align: left;
-		margin-top: 0.5rem;
-	}
-
 	.about-me {
 		padding: 1rem;
 		margin-top: 2rem;
@@ -405,9 +324,6 @@ footer > div > div {
 }
 
 @media (orientation: portrait) and (max-width: 700px) {
-	.home h2 {
-		font-size: 4.5rem;
-	}
 	.about-me {
 		padding: 0.5rem;
 	}
@@ -415,9 +331,6 @@ footer > div > div {
 
 /* Ajustes extras para telas muito pequenas */
 @media (max-width: 450px) {
-	.home h2 {
-		font-size: 4.5rem;
-	}
 	.about-me {
 		padding: 0.5rem;
 	}

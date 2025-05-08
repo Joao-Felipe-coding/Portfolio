@@ -1,0 +1,142 @@
+.home {
+	margin-top: 4rem;
+	display: flex;
+	font-family: "Playfair Display", serif;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	position: relative;
+}
+
+.home h2 {
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 7rem;
+	line-height: normal;
+	font-weight: 100;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.home-greeting {
+	opacity: 0;
+	animation: homeGreetingFadeIn 1.5s forwards;
+	animation-delay: 0.5s;
+	display: block;
+}
+
+.home-name {
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 900;
+	color: var(--d-text2);
+	text-transform: uppercase;
+	opacity: 0;
+	animation: homeNameFadeIn 1.5s forwards;
+	animation-delay: 2s;
+	display: block;
+}
+
+@keyframes homeGreetingFadeIn {
+	from { opacity: 0; transform: translateX(-40px);}
+	to { opacity: 1; transform: translateY(0);}
+}
+@keyframes homeNameFadeIn {
+	from { opacity: 0; transform: translateX(0);}
+	to { opacity: 1; transform: translateY(0);}
+}
+
+.home-role {
+	color: var(--d-text2);
+	font-size: 1.5rem;
+	writing-mode: vertical-lr;
+	text-orientation: mixed;
+	letter-spacing: 0.2rem;
+	text-align: center;
+	opacity: 0;
+	animation: homeRoleFadeIn 2s forwards;
+	animation-delay: 3s;
+}
+
+@keyframes homeRoleFadeIn {
+	from { opacity: 0; transform: translateY(-30px);}
+	to { opacity: 1; transform: translateX(0);}
+}
+
+/* Animação do pedido de scroll */
+.container_mouse {
+	opacity: 0;
+	animation: mouseFadeIn 0.5s forwards;
+	animation-delay: 5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes mouseFadeIn {
+	from { opacity: 0; transform: translateY(60px);}
+	to { opacity: 1; transform: translateY(0);}
+}
+
+.mouse-btn {
+	margin: auto;
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+	width: 30px;
+	height: 50px;
+	border: 3px solid rgba(180, 180, 180, 0.918);
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+}
+.mouse-scroll {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: rgba(180, 180, 180, 0.918);
+	border-radius: 8px;
+	margin: 0;
+	animation: scrolling13 2s linear infinite;
+}
+@keyframes scrolling13 {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+}
+
+/* Responsividade para home */
+@media (orientation: portrait) and (max-width: 700px) {
+	.home h2 {
+		font-size: 4.5rem;
+	}
+}
+@media (max-width: 700px) {
+	.home p.home-role {
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		text-align: left;
+		margin-top: 0.5rem;
+	}
+	.container_mouse,
+	.mouse-btn {
+		display: none !important;
+	}
+}
+@media (max-width: 450px) {
+	.home h2 {
+		font-size: 4.5rem;
+	}
+}
