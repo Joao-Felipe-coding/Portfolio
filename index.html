@@ -10,9 +10,15 @@
   <link rel="stylesheet" href="./assets/css/card-project.css">
   <link rel="stylesheet" href="./assets/css/contact.css">
   <title>Portfolio</title>
+  <style>
+    /* Oculta o conteúdo até que os estilos sejam carregados */
+    body.loading {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
-<body>
+<body class="loading">
   <header class="header">
     <!-- Perfil do usuário -->
     <div id="headerProfile" class="header-profile">
@@ -171,6 +177,12 @@
   </footer>
   <script src="./assets/js/theme-toggle.js"></script>
   <script src="./assets/js/nav-responsive.js"></script>
+  <script>
+    // Remove a classe "loading" após o carregamento completo
+    window.addEventListener('load', () => {
+      document.body.classList.remove('loading');
+    });
+  </script>
 </body>
 
 </html>
