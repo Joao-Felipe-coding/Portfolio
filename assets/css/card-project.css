@@ -11,6 +11,25 @@
 	margin-top: 4rem; /* espaçamento para evitar sobreposição */
 }
 
+.projects h2{
+	font-size: 3em;
+	margin-bottom: 5rem;
+}
+
+.others h2 {
+	font-size: 2.5em;
+	margin-top: 10rem;
+	margin-bottom: 1rem;
+}
+.others p {
+	margin-bottom: 3rem;
+	text-align: center;
+	color: var(--d-text2);
+}
+.others a {
+	color: var(--d-text2);
+}
+
 .custom-card-header {
 	position: relative;
 	margin: 0 1rem;
