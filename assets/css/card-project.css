@@ -1,5 +1,6 @@
 .custom-card {
 	position: relative;
+	height: 23rem;
 	display: flex;
 	width: 20rem;
 	flex-direction: column;
@@ -189,9 +190,10 @@
 	transition: background 0.4s, color 0.2s, border 0.4s;
 }
 .custom-card-large-btn:hover {
-	background: #000000;
-	color: #ffffff;
-	border: #000000;
+	transition: all 0.4s ease;
+	background-color: var(--d-text);
+	color: var(--d-bg);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsividade para o card grande */

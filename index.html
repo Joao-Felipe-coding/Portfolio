@@ -70,48 +70,63 @@
 
     <!-- Seção Sobre Mim -->
     <section id="aboutMe" class="about-me" aria-label="Sobre mim">
-      <div class="text-me">
-        <h2>Sobre mim</h2>
-        <hr>
-        <p style="text-indent: 2em;">
-          Sou um <strong>Desenvolvedor FullStack</strong> com foco em <strong>JavaScript</strong> e
-          <strong>TypeScript</strong>, apaixonado por criar soluções eficientes. Utilizo o <strong>Front-end</strong> e
-          o <strong>Back-end</strong> para aplicações web, sempre buscando trazer resultados de alta qualidade. Confira
-          alguns dos meus sites na seção <a href="#projects"><strong>Projetos</strong></a>.
-        </p>
-        <p style="text-indent: 2em;">
-          Gosto de compartilhar conteúdos e aprendizados sobre <strong>Desenvolvimento Web</strong> para ajudar a
-          comunidade. Sinta-se à vontade para se conectar comigo no <a
-            href="https://www.linkedin.com/in/joaofelipemoraisdeoliveira/"><strong>LinkedIn</strong></a> ou <a
-            href="https://github.com/Joao-Felipe-coding"><strong>GitHub</strong></a>, onde posto novas tecnologias e
-          conteúdos que estou atualmente usando no dia-a-dia de programador.
-        </p>
-        <p style="text-indent: 2em;">
-          Estou <strong>aberto a oportunidades</strong> onde possa contribuir, aprender e crescer. Se você tem uma vaga
-          alinhada ao meu perfil, <a href="#contact"><strong>entre em contato</strong></a>!
-        </p>
+      <!-- Título centralizado -->
+      <div style="text-align: center; margin-bottom: 5rem;">
+        <h2 style="font-size: 3rem; margin: 0;">Sobre mim</h2>
       </div>
-      <div class="skills-me">
-        <h2 style="margin-top: 5rem;">Habilidades</h2>
-        <hr>
-        <div class="skills-list">
-          <span class="skill-badge"><strong>JavaScript</strong></span>
-          <span class="skill-badge"><strong>TypeScript</strong></span>
-          <span class="skill-badge"><strong>HTML</strong></span>
-          <span class="skill-badge"><strong>CSS</strong></span>
-          <span class="skill-badge"><strong>React</strong></span>
-          <span class="skill-badge"><strong>Node.js</strong></span>
-          <span class="skill-badge"><strong>Express</strong></span>
-          <span class="skill-badge"><strong>MySQL</strong></span>
-          <span class="skill-badge"><strong>MongoDB</strong></span>
+      <div class="about-me-flex">
+        <!-- Subtítulo e texto -->
+        <div class="text-me">
+          <h3 style="margin-top: 0; text-align: center; font-size: 1.6rem;">Minha trajetória</h3>
+          <hr style="margin-bottom: 2.7rem;">
+          <p style="text-indent: 2em;">
+            Sou um <strong>Desenvolvedor FullStack</strong> com foco em <strong>JavaScript</strong> e
+            <strong>TypeScript</strong>, apaixonado por criar soluções eficientes. Utilizo o <strong>Front-end</strong>
+            e
+            o <strong>Back-end</strong> para aplicações web, sempre buscando trazer resultados de alta qualidade.
+            Confira
+            alguns dos meus sites na seção <a href="#projects"><strong>Projetos</strong></a>.
+          </p>
+          <p style="text-indent: 2em;">
+            Gosto de compartilhar conteúdos e aprendizados sobre <strong>Desenvolvimento Web</strong> para ajudar a
+            comunidade. Sinta-se à vontade para se conectar comigo no <a
+              href="https://www.linkedin.com/in/joaofelipemoraisdeoliveira/"><strong>LinkedIn</strong></a> ou <a
+              href="https://github.com/Joao-Felipe-coding"><strong>GitHub</strong></a>, onde posto novas tecnologias e
+            conteúdos que estou atualmente usando no dia-a-dia de programador.
+          </p>
+          <p style="text-indent: 2em;">
+            Estou <strong>aberto a oportunidades</strong> onde possa contribuir, aprender e crescer. Se você tem uma
+            vaga
+            alinhada ao meu perfil, <a href="#contact"><strong>entre em contato</strong></a>!
+          </p>
+        </div>
+        <!-- Espaçamento entre subtítulos -->
+        <div class="about-me-divider"></div>
+        <!-- Subtítulo e skills -->
+        <div class="skills-me">
+          <h3 style="margin-top: 0; text-align: center; font-size: 1.6rem;">Habilidades</h3>
+          <hr>
+          <div class="skills-list"">
+            <span class=" skill-badge"><strong>JavaScript</strong></span>
+            <span class="skill-badge"><strong>TypeScript</strong></span>
+            <span class="skill-badge"><strong>HTML</strong></span>
+            <span class="skill-badge"><strong>CSS</strong></span>
+            <span class="skill-badge"><strong>React</strong></span>
+            <span class="skill-badge"><strong>Node.js</strong></span>
+            <span class="skill-badge"><strong>Express</strong></span>
+            <span class="skill-badge"><strong>MySQL</strong></span>
+            <span class="skill-badge"><strong>MongoDB</strong></span>
+            <span class="skill-badge"><strong>Git</strong></span>
+            <span class="skill-badge"><strong>GitHub</strong></span>
+          </div>
+          <!-- CV -->
+          <div class="cv">
+            <button type="button" onclick="window.open('./assets/cv/CV.pdf', '_blank')">CV</button>
+          </div>
         </div>
       </div>
-
-      <!-- CV -->
-      <div class="cv">
-        <button type="button" onclick="window.open('./assets/cv/CV.pdf', '_blank')">CV</button>
-      </div>
     </section>
+
 
     <!-- Seção Projetos -->
     <section id="projects" class="projects" aria-label="Projetos">
@@ -145,6 +160,61 @@
         </div>
       </div>
 
+      <!-- DEVSTAGE (Destaque - fora do grid) -->
+      <div class="custom-card-large">
+        <div class="custom-card-large-img">
+          <img src="./assets/images/projects/devstage.jpg" alt="Devstage" />
+        </div>
+        <div class="custom-card-large-body">
+          <h5 class="custom-card-large-title" style="font-family: 'Oxanium';">
+            <span style="color: #6F9DE2;">CodeCraft</span> <br> Summit 2025
+          </h5>
+          <p class="custom-card-large-text">
+            Este projeto é um sistema simples de inscrição em evento, com funcionalidade de convite e contagem de
+            inscritos por referência. Em meu repositório do GitHub você também encontra minha versão em back-end com
+            Node.js. porém, esta versão já possui design próprio em CSS com um back-end feio em JavaScript.
+          </p>
+          <div class="custom-card-large-techs">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="custom-card-large-footer">
+            <button type="button" class="custom-card-large-btn"
+              onclick="window.open('https://joao-felipe-coding.github.io/Event-Subscribe_FullStack/', '_blank')">
+              Visitar o site
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- pass.in (Destaque - fora do grid) -->
+      <div class="custom-card-large">
+        <div class="custom-card-large-img">
+          <img src="./assets/images/projects/pass-in.jpg" alt="GDG Unicesumar" />
+        </div>
+        <div class="custom-card-large-body">
+          <h5 class="custom-card-large-title">
+            <span style="color: #f48f56;">&lt;nlw/&gt; unite</span> <br> <span style="font-weight: 300;">pass.in</span>
+          </h5>
+          <p class="custom-card-large-text">
+            O pass.in é uma aplicação que gerencia participantes de eventos. Usado para realizar inscrição e check-in dos participantes.
+          </p>
+          <div class="custom-card-large-techs">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="custom-card-large-footer">
+            <button type="button" class="custom-card-large-btn"
+              onclick="window.open('https://evento-tech-sepia.vercel.app', '_blank')">
+              Visitar o site
+            </button>
+          </div>
+        </div>
+      </div>
+
+
       <!-- GDG Unicesumar (Destaque - fora do grid) -->
       <div class="custom-card-large">
         <div class="custom-card-large-img">
@@ -172,36 +242,11 @@
         </div>
       </div>
 
-      <!-- DEVSTAGE (Destaque - fora do grid) -->
-      <div class="custom-card-large">
-        <div class="custom-card-large-img">
-          <img src="./assets/images/projects/devstage.jpg" alt="Devstage" />
-        </div>
-        <div class="custom-card-large-body">
-          <h5 class="custom-card-large-title" style="font-family: 'Oxanium';">
-            <span style="color: #6F9DE2;">CodeCraft</span> <br> Summit 2025
-          </h5>
-          <p class="custom-card-large-text">
-            Este projeto é um sistema simples de inscrição em evento, com funcionalidade de convite e contagem de inscritos por referência. Em meu repositório do GitHub você também encontra minha versão em back-end com Node.js. porém, esta versão já possui design próprio em CSS com um back-end feio em JavaScript.
-          </p>
-          <div class="custom-card-large-techs">
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
-            <span class="tech-badge">JavaScript</span>
-          </div>
-          <div class="custom-card-large-footer">
-            <button type="button" class="custom-card-large-btn"
-              onclick="window.open('https://joao-felipe-coding.github.io/Event-Subscribe_FullStack/', '_blank')">
-              Visitar o site
-            </button>
-          </div>
-        </div>
-      </div>
-
       <!-- Outros projetos -->
       <div class="others">
         <h2>Outros</h2>
-        <span>Acesse meu <a href="https://github.com/Joao-Felipe-coding" target="_blank"><strong>GitHub</strong></a> para
+        <span>Acesse meu <a href="https://github.com/Joao-Felipe-coding" target="_blank"><strong>GitHub</strong></a>
+          para
           visualizar estes e muito mais</span>
 
         <div class="projects-grid">
