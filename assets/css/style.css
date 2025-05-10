@@ -411,7 +411,7 @@ footer > div > div {
 	}
 }
 
-/* Ajustes extras para telas muito pequenas */
+/* Ajustes extras para telas muuito pequenas */
 @media (max-width: 450px) {
 	.about-me {
 		padding: 0.5rem;
