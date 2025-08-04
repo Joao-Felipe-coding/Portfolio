@@ -70,7 +70,7 @@
 .container_mouse {
 	opacity: 0;
 	animation: mouseFadeIn 0.5s forwards;
-	animation-delay: 5s;
+	animation-delay: 5s; /* Inicia aos 5s, termina aos 5.5s */
 	display: flex;
 	justify-content: center;
 	align-items: center;
