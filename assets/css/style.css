@@ -216,6 +216,7 @@ body.no-scroll {
 	display: flex;
 	margin: auto;
 	margin-top: 5rem;
+	margin-bottom: 5rem;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -392,6 +393,13 @@ footer > div > div {
 	.about-me-divider {
 		display: none;
 	}
+
+	/* Contact padding para smartphones */
+	.contact {
+		margin: 2rem 1.5rem;
+		padding: 2rem 1.5rem;
+		max-width: calc(100% - 3rem);
+	}
 }
 
 @media (max-width: 900px) {
@@ -431,5 +439,12 @@ footer > div > div {
 	.skill-badge {
 		font-size: 0.85rem;
 		padding: 0.3rem 0.7rem;
+	}
+
+	/* Contact padding para telas muito pequenas */
+	.contact {
+		margin: 1.5rem 1rem;
+		padding: 1.5rem 1rem;
+		max-width: calc(100% - 2rem);
 	}
 }
