@@ -1,11 +1,13 @@
 .home {
-	margin-top: 4rem;
+	height: 100vh;
 	display: flex;
 	font-family: "Playfair Display", serif;
 	justify-content: space-between;
 	align-items: center;
 	text-align: left;
 	position: relative;
+	padding: 5rem 3rem 6rem 3rem; /* Top, Right, Bottom, Left */
+	box-sizing: border-box;
 }
 
 .home h2 {
@@ -72,6 +74,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
 }
 @keyframes mouseFadeIn {
 	from { opacity: 0; transform: translateY(60px);}
@@ -80,8 +86,6 @@
 
 .mouse-btn {
 	margin: auto;
-	margin-top: 4rem;
-	margin-bottom: 6rem;
 	width: 30px;
 	height: 50px;
 	border: 3px solid rgba(180, 180, 180, 0.918);
@@ -119,11 +123,17 @@
 
 /* Responsividade para home */
 @media (orientation: portrait) and (max-width: 700px) {
+	.home {
+		padding: 4rem 2rem 4rem 2rem; /* Menor padding para mobile */
+	}
 	.home h2 {
 		font-size: 4.5rem;
 	}
 }
 @media (max-width: 700px) {
+	.home {
+		padding: 4rem 1.5rem 4rem 1.5rem; /* Menor padding para mobile */
+	}
 	.home p.home-role {
 		font-size: 1rem;
 		letter-spacing: 0.1rem;
@@ -136,6 +146,9 @@
 	}
 }
 @media (max-width: 450px) {
+	.home {
+		padding: 4rem 1rem 4rem 1rem; /* Padding ainda menor para telas muito pequenas */
+	}
 	.home h2 {
 		font-size: 4.5rem;
 	}

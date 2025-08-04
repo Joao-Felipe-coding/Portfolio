@@ -57,13 +57,18 @@ body {
 
 /* Início de estilização das section */
 .main-container {
-	padding: 3rem;
 	line-height: 1.9em;
+}
+
+/* Padding específico para seções que não são home */
+.main-container > section:not(.home) {
+	padding: 3rem;
 }
 
 /* SOBRE MIM */
 .about-me {
 	margin: auto;
+	margin-top: 8rem;
 	max-width: 70rem;
 	padding: 1.6rem;
 	padding-top: 3rem;
@@ -333,7 +338,7 @@ footer > div > div {
 
 /* responsividade */
 @media (max-width: 795px) {
-	.main-container {
+	.main-container > section:not(.home) {
 		padding: 1rem;
 	}
 	.projects-grid {
@@ -351,7 +356,7 @@ footer > div > div {
 
 	.about-me {
 		padding: 1rem;
-		margin-top: 10rem;
+		margin-top: 6rem;
 		max-width: 100%;
 		font-size: 15px;
 	}
