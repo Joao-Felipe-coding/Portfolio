@@ -75,6 +75,12 @@ const scrollController = new ScrollController();
 
 // Inicia o bloqueio quando a página carrega
 window.addEventListener('load', () => {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Garante que a página sempre inicie no topo
+  window.scrollTo(0, 0);
   scrollController.blockScroll();
   
   // Libera o scroll após todas as animações terminarem (5.5s total)
@@ -84,5 +90,5 @@ window.addEventListener('load', () => {
   // mouseFadeIn: 5s delay + 0.5s duration = 5.5s
   setTimeout(() => {
     scrollController.unblockScroll();
-  }, 5500); // Libera após 5.5 segundos
+  }, 5000); // Libera após 5.5 segundos
 });
